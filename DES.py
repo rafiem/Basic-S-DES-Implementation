@@ -13,9 +13,11 @@ KEY   = '0111111101'
 left  = lambda x : x[:len(x)/2]
 right = lambda x : x[len(x)/2:]
 
+#Permuatation step
 def permutation(original, key):
     return ''.join(original[i-1] for i in key)
 
+#Shift step
 def shift(bit):
     return left(bit)[1:] + left(bit)[0] +\
            right(bit)[1:] + right(bit)[0]
